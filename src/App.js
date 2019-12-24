@@ -1,6 +1,11 @@
 import React from 'react';
+import {Route, withRouter, Switch} from 'react-router-dom'
+// import utils
 import AppContext from './utils/appContext'
 import ModelStore from './utils/modelsData'
+// import components
+import LandingPage from './components/landingPage'
+// import styles
 import './App.scss';
 
 class App extends React.Component {
@@ -62,7 +67,9 @@ class App extends React.Component {
             </header>
             <main>
               <div className="layout">
-
+                <Switch>
+                  <Route exact path='/' component={LandingPage}/>
+                </Switch>
               </div>
             </main>
           </div>
@@ -71,4 +78,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);
