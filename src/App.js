@@ -17,14 +17,43 @@ class App extends React.Component {
       qty: 0
     }]
   };
-  
+
   componentDidMount() {
     const modelsWithQty = ModelStore.models.map(model => ({ ...model, qty: '' }))
     this.setState({ models: modelsWithQty })
   }
 
+  changeQty = (value, model) => {
+    const val = value ? Number(value, 10) > 0 ? Number(value, 10) : '' : '';
+    let modelArray = [...this.state.models];
+    console.log(model);
+    const objIndex = modelArray.findIndex((item => item.model === model.model));
+    console.log(objIndex);
+    modelArray[objIndex].qty = val;
+
+    this.setState({
+      models: modelArray
+    })
+  };
+
+  emptyCart = (e) => {
+    e.preventDefault();
+    const modelArray = this.state.models.map(model => {
+      model.qty = '';
+      return model;
+    });
+    this.setState({
+      models: modelArray
+    })
+  };
+
   render() {
-    const contextValue = {};
+    const contextValue = {
+      models: this.state.models,
+      cart: this.state.cart,
+      handleChange: this.changeQty,
+      emptyCart: this.emptyCart
+    };
     return (
         <AppContext.Provider value={ contextValue }>
           <div className="App">
