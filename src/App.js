@@ -7,6 +7,11 @@ function App() {
       <header className="App-header">
         <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.png" alt="logo"></img>
       </header>
+      <main>
+        <div className="layout">
+
+        </div>
+      </main>
     </div>
   );
 }
