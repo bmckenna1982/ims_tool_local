@@ -1,0 +1,22 @@
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.Breadcrumb_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  .icon {
+    display: none;
+  }
+}

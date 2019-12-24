@@ -1,0 +1,21 @@
+.emptyCart_button {
+  background: linear-gradient(#ffffff, var(--grey));
+  border: 1px solid #333333;
+  border-radius: 20px;
+  box-shadow: 0 2px #333333;
+}
+
+.emptyCart_button:hover {
+  box-shadow: 0 1px #333333;
+}
+
+.emptyCart_button:active {
+  box-shadow: 0 0 #333333;
+  top: 6px;
+}
+
+.summary__total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

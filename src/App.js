@@ -1,75 +1,93 @@
-import React from 'react';
+import React from 'react'
 import {Route, withRouter, Switch} from 'react-router-dom'
-// import utils
-import AppContext from './utils/appContext'
-import ModelStore from './utils/modelsData'
-// import components
-import LandingPage from './components/landingPage'
-// import styles
+import Family from './components/family'
+import LandingPage from './components/landingpage'
+import ModelStore from './newModelsData'
+import AppContext from './components/AppContext'
 import './App.scss';
+import PriceList from './components/price_list';
+import Cart from './components/cart'
+import Breadcrumbs from './components/breadcrumbs'
 
 class App extends React.Component {
   state = {
     models: [],
-    cart: [{
+    shopCart: [{
       server: {
-        manufacturer: '',
-        family: '',
-        model: '',
+        manufacturer: "",
+        family: "",
+        model: "",
         price: 0,
         qty: 0
       },
       qty: 0
+
     }]
-  };
+  }
 
   componentDidMount() {
-    const modelsWithQty = ModelStore.models.map(model => ({ ...model, qty: '' }))
-    this.setState({ models: modelsWithQty })
+    const modelsWithQty = ModelStore.models.map(model => ({...model, qty: ''}))
+    this.setState({models: modelsWithQty})
   }
 
   changeQty = (value, model) => {
-    const val = value ? Number(value, 10) > 0 ? Number(value, 10) : '' : '';
-    let modelArray = [...this.state.models];
-    console.log(model);
-    const objIndex = modelArray.findIndex((item => item.model === model.model));
-    console.log(objIndex);
-    modelArray[objIndex].qty = val;
+    const val = value
+        ? Number(value, 10) > 0
+            ? Number(value, 10)
+            : ''
+        : ''
+    let modelArray = [...this.state.models]
+    console.log(model)
+    const objIndex = modelArray.findIndex((item => item.model === model.model))
+    console.log(objIndex)
+    modelArray[objIndex].qty = val
 
     this.setState({
       models: modelArray
     })
-  };
+  }
 
   emptyCart = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const modelArray = this.state.models.map(model => {
-      model.qty = '';
-      return model;
-    });
+      model.qty = ''
+      return model
+    })
     this.setState({
       models: modelArray
     })
-  };
+  }
+
+  numberWithCommas = (x) => (
+      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  )
 
   render() {
     const contextValue = {
       models: this.state.models,
-      cart: this.state.cart,
+      shopCart: this.state.shopCart,
       handleChange: this.changeQty,
       emptyCart: this.emptyCart
-    };
+    }
     return (
-        <AppContext.Provider value={ contextValue }>
+        <AppContext.Provider
+            value={contextValue}>
           <div className="App">
             <header className="App-header">
               <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.png" alt="logo"></img>
             </header>
             <main>
               <div className="layout">
-                <Switch>
-                  <Route exact path='/' component={LandingPage}/>
-                </Switch>
+                <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs}/>
+                <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs}/>
+                <div className='list-container'>
+                  <Switch>
+                    <Route exact path='/' component={LandingPage}/>
+                    <Route exact path='/api/mfg/:manufacturer' component={Family}/>
+                    <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList}/>
+                  </Switch>
+                  <Cart/>
+                </div>
               </div>
             </main>
           </div>
@@ -78,4 +96,4 @@ class App extends React.Component {
   }
 }
 
-export default withRouter(App);
+export default withRouter(App)
