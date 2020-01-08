@@ -9,7 +9,23 @@ Main {
 
 .App-header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 1024px;
+}
+
+.NavMenu_List {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;
+  background-color: midnightblue;
+}
+
+.NavMenu_List li {
+  background-color: cadetblue; 
+  padding: 5px; 
 }
 
 .layout {

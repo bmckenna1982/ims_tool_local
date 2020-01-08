@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, withRouter, Switch} from 'react-router-dom'
+import { Route, withRouter, Switch, NavLink } from 'react-router-dom'
 import Family from './components/family'
 import LandingPage from './components/landingpage'
 import ModelStore from './newModelsData'
@@ -26,16 +26,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const modelsWithQty = ModelStore.models.map(model => ({...model, qty: ''}))
-    this.setState({models: modelsWithQty})
+    const modelsWithQty = ModelStore.models.map(model => ({ ...model, qty: '' }))
+    this.setState({ models: modelsWithQty })
   }
 
   changeQty = (value, model) => {
     const val = value
-        ? Number(value, 10) > 0
-            ? Number(value, 10)
-            : ''
+      ? Number(value, 10) > 0
+        ? Number(value, 10)
         : ''
+      : ''
     let modelArray = [...this.state.models]
     console.log(model)
     const objIndex = modelArray.findIndex((item => item.model === model.model))
@@ -59,8 +59,15 @@ class App extends React.Component {
   }
 
   numberWithCommas = (x) => (
-      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   )
+
+  scrollToCart = (e) => {
+    e.preventDefault()
+    console.log('scroll')
+    const element = document.getElementsByClassName('Cart')
+    element[0].scrollIntoView()
+  }
 
   render() {
     const contextValue = {
@@ -70,28 +77,37 @@ class App extends React.Component {
       emptyCart: this.emptyCart
     }
     return (
-        <AppContext.Provider
-            value={contextValue}>
-          <div className="App">
-            <header className="App-header">
-              <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.png" alt="logo"></img>
-            </header>
-            <main>
-              <div className="layout">
-                <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs}/>
-                <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs}/>
-                <div className='list-container'>
-                  <Switch>
-                    <Route exact path='/' component={LandingPage}/>
-                    <Route exact path='/api/mfg/:manufacturer' component={Family}/>
-                    <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList}/>
-                  </Switch>
-                  <Cart/>
-                </div>
+      <AppContext.Provider
+        value={contextValue}>
+        <div className="App">
+          <header className="App-header">
+            <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.png" alt="logo"></img>
+            <nav className='NavMenu'>
+              <ul className='NavMenu_List'>
+                <li>
+                  <NavLink className='NavMenu_Link' to={'/'}>Home</NavLink>
+                </li>
+                <li onClick={this.scrollToCart}>Product Cart</li>
+                <li onClick={this.emptyCart}>Clear Product Cart</li>
+              </ul>
+            </nav>
+          </header>
+          <main>
+            <div className="layout">
+              <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
+              <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} />
+              <div className='list-container'>
+                <Switch>
+                  <Route exact path='/' component={LandingPage} />
+                  <Route exact path='/api/mfg/:manufacturer' component={Family} />
+                  <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList} />
+                </Switch>
+                <Cart />
               </div>
-            </main>
-          </div>
-        </AppContext.Provider>
+            </div>
+          </main>
+        </div>
+      </AppContext.Provider>
     );
   }
 }
