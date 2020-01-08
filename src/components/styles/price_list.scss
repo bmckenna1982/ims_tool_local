@@ -5,14 +5,54 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 
-.price_list__table, th, td {
+.price_list h1 {
+  font-size: 18px;
+}
+
+.price_list__table, .cart_table {
+  border-collapse: collapse;
+  background-color: #ddd;
+  width: 100%;
+}
+
+th, td {
   border: 1px solid #222;
   padding: 5px;
+  font-size: 14px;
+}
+
+td {
+  min-width: 50px;
+}
+
+// .price_list__table tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #f2f2f2;}
+
+th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: left;
+  background-color: #17548c;
+  color: white;
+}
+
+.Increment_plusOne, .Increment_minusOne {
+  min-width: 25px;
 }
 
 input {
   width: 30px;
   text-align: center;
+}
+
+@media only screen and (min-width: 769px) {
+  .price_list h1, .price_list h2 {
+    font-size: 21px;
+    margin: 0.67em 0;
+  } 
+
 }
