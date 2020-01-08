@@ -10,9 +10,9 @@ Main {
 .App-header {
   position: fixed;
   display: flex;
-  flex-direction: column;
-  margin: auto;
-  max-width: 1024px;
+  flex-direction: column;  
+  width: 100%;
+  background-color: #17548c;
 }
 
 .NavMenu_List {
@@ -20,41 +20,29 @@ Main {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 10px;
-  background-color: #17548c;
+  padding: 10px;  
 }
 
 .NavMenu_List li {
   background-color: #34aed7; 
   padding: 5px; 
-  margin: auto;  
+  margin: auto;
+  color: #fff;
+  box-shadow: 0vw 1vh 3vh 1px rgba(0, 0, 0, 0.5);
 }
 
 li:hover {
   cursor: pointer;
+  box-shadow: none;
 }
 
 .NavMenu_List li a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 a:visited {
   text-decoration: none;
-}
-
-a:active {
-  background-color: #555;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.sticky + .content {
-  padding-top: 102px;
 }
 
 .layout {
@@ -74,13 +62,29 @@ a:active {
 }
 
 .img-logo {
+  max-width: 768px;
+  margin: auto;
   box-shadow: 0vw 1vh 5vh 1px rgba(0, 0, 0, 0.5);
+
 }
 
 @media only screen and (max-width: 800px) {
 
   .list-container {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .layout {
+    min-width: 768px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .NavMenu_List {
+    max-width: 768px;
+    margin: auto;
   }
 }
 
