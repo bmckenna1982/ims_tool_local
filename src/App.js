@@ -89,7 +89,7 @@ class App extends React.Component {
         value={contextValue}>
         <div className="App">
           <header className="App-header">
-            <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.png" alt="logo"></img>
+            <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.jpg" alt="logo"></img>
             <nav className='NavMenu'>
               <ul className='NavMenu_List'>
                 <li>
