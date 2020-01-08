@@ -62,8 +62,7 @@ a:visited {
 }
 
 .img-logo {
-  max-width: 768px;
-  margin: auto;
+  max-width: 768px;  
   box-shadow: 0vw 1vh 5vh 1px rgba(0, 0, 0, 0.5);
 
 }
@@ -91,6 +90,10 @@ a:visited {
 
   .NavMenu_List {
     max-width: 768px;
+    margin: auto;
+  }
+
+  .img-logo {
     margin: auto;
   }
 }
