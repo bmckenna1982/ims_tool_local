@@ -8,6 +8,7 @@ import './App.scss';
 import PriceList from './components/price_list';
 import Cart from './components/cart'
 import Breadcrumbs from './components/breadcrumbs'
+import Popup from './components/popup'
 
 class App extends React.Component {
   state = {
@@ -22,7 +23,8 @@ class App extends React.Component {
       },
       qty: 0
 
-    }]
+    }],
+    showPopup: false
   }
 
   componentDidMount() {
@@ -62,7 +64,13 @@ class App extends React.Component {
       x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
   )
 
+  togglePopup = () => {
+    this.setState({showPopup: !this.state.showPopup})
+  }
+
   render() {
+    let printString = `View your cart then use the print features of your browser to capture your results. 
+  If a printer isn't handy, just capture a screen shot.`
     const contextValue = {
       models: this.state.models,
       shopCart: this.state.shopCart,
@@ -87,6 +95,16 @@ class App extends React.Component {
                     <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList}/>
                   </Switch>
                   <Cart/>
+                </div>
+                <div className="button-container">
+                  <button className="print-button" onClick={this.togglePopup.bind(this)}>Print</button>
+                  {this.state.showPopup ?
+                      <Popup
+                          text={printString}
+                          closePopup={this.togglePopup.bind(this)}
+                      />
+                      : null
+                  }
                 </div>
               </div>
             </main>
