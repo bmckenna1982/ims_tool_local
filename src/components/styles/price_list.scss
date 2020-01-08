@@ -7,9 +7,26 @@
   justify-content: center;
 }
 
-.price_list__table, th, td {
+.price_list__table {
+  border-collapse: collapse;
+  background-color: #ddd;
+}
+
+.price_list__table th, .price_list__table td {
   border: 1px solid #222;
   padding: 5px;
+}
+
+// .price_list__table tr:nth-child(even){background-color: #f2f2f2;}
+
+.price_list__table tr:hover {background-color: #f2f2f2;}
+
+.price_list__table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #17548c;
+  color: white;
 }
 
 input {
