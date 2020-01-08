@@ -7,26 +7,40 @@
   justify-content: center;
 }
 
-.price_list__table {
-  border-collapse: collapse;
-  background-color: #ddd;
+.price_list h1 {
+  font-size: 18px;
 }
 
-.price_list__table th, .price_list__table td {
+.price_list__table, .cart_table {
+  border-collapse: collapse;
+  background-color: #ddd;
+  width: 100%;
+}
+
+th, td {
   border: 1px solid #222;
   padding: 5px;
+  font-size: 14px;
+}
+
+td {
+  min-width: 50px;
 }
 
 // .price_list__table tr:nth-child(even){background-color: #f2f2f2;}
 
-.price_list__table tr:hover {background-color: #f2f2f2;}
+tr:hover {background-color: #f2f2f2;}
 
-.price_list__table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
+th {
+  padding-top: 6px;
+  padding-bottom: 6px;
   text-align: left;
   background-color: #17548c;
   color: white;
+}
+
+.Increment_plusOne, .Increment_minusOne {
+  min-width: 25px;
 }
 
 input {

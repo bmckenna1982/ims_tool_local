@@ -41,7 +41,7 @@ export default class Family extends React.Component {
       <div className="family">
         <div className="heading">
           <h1>
-            {mfg}
+            {mfg} Product Families
           </h1>
         </div>
         <ul className="family-list">

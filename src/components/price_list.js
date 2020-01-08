@@ -46,7 +46,7 @@ export default class PriceList extends React.Component {
     return (
         <div className="price_list">
           <h1>
-            {this.props.match.params.manufacturer}
+            Models in this {this.props.match.params.manufacturer} family
           </h1>
           <table className="price_list__table">
             <thead>

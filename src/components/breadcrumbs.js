@@ -44,9 +44,11 @@ export default class Breadcrumbs extends React.Component {
                 crumb
             ))}
           </div>
-          <span className="icon" onClick={this.handleClick}>
+          <span className="icon_cart" onClick={this.handleClick}>
             <FontAwesomeIcon icon={faShoppingCart}/>
+            <p className="icon_text">Scroll to Cart</p>            
           </span>
+
         </div>
     )
   }

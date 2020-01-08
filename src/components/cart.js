@@ -11,10 +11,11 @@ class Cart extends React.Component {
 
   handleClick(event) {
     event.preventDefault()
-    const element = document.getElementsByClassName('App-header')
+    const element = document.getElementsByClassName('Breadcrumb_container')
 
     if (element.length > 0) {
-      element[0].scrollIntoView()
+      // element[0].scrollIntoView()
+      window.scrollTo(0,0)
     }
   }
 
@@ -43,8 +44,9 @@ class Cart extends React.Component {
         <section className="Cart">
           <div className="cart-title">
             <h2>Your cart</h2>
-            <span className="icon" onClick={this.handleClick}>
+            <span className="icon_arrow" onClick={this.handleClick}>
             <FontAwesomeIcon icon={faArrowUp}/>
+            <p className="icon_arrow_text">Return to Top</p>
           </span>
           </div>
           {cartContents}
