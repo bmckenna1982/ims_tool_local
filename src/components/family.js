@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import AppContext from './AppContext'
 // import { API_BASE_URL } from '../config';
 
@@ -38,26 +38,26 @@ export default class Family extends React.Component {
     const path = this.props.location.pathname
     const mfg = this.state.manufacturer
     return (
-      <div className="family">
-        <div className="heading">
-          <h1>
-            {mfg} Product Families
-          </h1>
+        <div className="family">
+          <div className="heading">
+            <h1>
+              {mfg} Product Families
+            </h1>
+          </div>
+          <ul className="family-list">
+            {this.state.families.map(fam => (
+                <li key={fam}>
+                  <Link to={{
+                    pathname: `${path}/${fam}`,
+                    params: {
+                      manufacturer: {mfg},
+                      family: {fam}
+                    }
+                  }}>{fam}</Link>
+                </li>
+            ))}
+          </ul>
         </div>
-        <ul className="family-list">
-          {this.state.families.map(fam => (
-            <li key={fam}>
-              <Link to={{
-                pathname: `${path}/${fam}`,
-                params: {
-                  manufacturer: { mfg },
-                  family: { fam }
-                }
-              }}>{fam}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
     )
   }
 }

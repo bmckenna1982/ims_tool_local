@@ -8,6 +8,7 @@ import './App.scss';
 import PriceList from './components/price_list';
 import Cart from './components/cart'
 import Breadcrumbs from './components/breadcrumbs'
+import Popup from './components/popup'
 
 class App extends React.Component {
   state = {
@@ -22,7 +23,8 @@ class App extends React.Component {
       },
       qty: 0
 
-    }]
+    }],
+    showPopup: false
   }
 
   componentDidMount() {
@@ -68,8 +70,14 @@ class App extends React.Component {
     const element = document.getElementsByClassName('Cart')
     element[0].scrollIntoView()
   }
+  
+  togglePopup = () => {
+    this.setState({showPopup: !this.state.showPopup})
+  }
 
   render() {
+    let printString = `View your cart then use the print features of your browser to capture your results. 
+  If a printer isn't handy, just capture a screen shot.`
     const contextValue = {
       models: this.state.models,
       shopCart: this.state.shopCart,
