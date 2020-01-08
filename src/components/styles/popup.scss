@@ -10,7 +10,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: blue;
+  background-color: #17548c;
   border-radius: 10px;
 }
 .popup-inner {
@@ -21,13 +21,13 @@
   position: absolute;
   font-size: 12px;
   height: 95%;
-  width: 95%;
+  width: 95%;  
   margin: auto;
   background: white;
   border-radius: 10px;
   color: black;
   .popup-text {
-
+    padding: 5px;
   }
   .popup-button {
 
