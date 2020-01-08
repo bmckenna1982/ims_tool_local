@@ -96,8 +96,8 @@ class App extends React.Component {
                   <NavLink className='NavMenu_Link' to={'/'}>Home</NavLink>
                 </li>
                 <li onClick={this.scrollToCart}>Product Cart</li>
-                <li onClick={this.emptyCart}>Clear Cart</li>
-                <li onClick={this.togglePopup.bind(this)}>Print
+                <li onClick={this.emptyCart}>Clear Product Cart</li>
+                <li onClick={this.togglePopup.bind(this)} className="print-button">Print
                   {this.state.showPopup ?
                       <Popup
                           text={printString}

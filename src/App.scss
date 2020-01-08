@@ -51,7 +51,6 @@ a:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0vw 1vh 5vh 1px rgba(0, 0, 0, 0.5);
   min-width: 300px;
 }
 
@@ -78,6 +77,10 @@ a:visited {
 
   .list-container {
     flex-direction: column;
+  }
+
+  .print-button {
+    display: none;
   }
 }
 
