@@ -97,6 +97,15 @@ class App extends React.Component {
                 </li>
                 <li onClick={this.scrollToCart}>Product Cart</li>
                 <li onClick={this.emptyCart}>Clear Product Cart</li>
+                <li onClick={this.togglePopup.bind(this)}>Print
+                  {this.state.showPopup ?
+                      <Popup
+                          text={printString}
+                          closePopup={this.togglePopup.bind(this)}
+                      />
+                      : null
+                  }
+                </li>
               </ul>
             </nav>
           </header>
