@@ -28,7 +28,6 @@ Main {
   padding: 5px; 
   margin: auto;
   color: #fff;
-  box-shadow: 0vw 1vh 3vh 1px rgba(0, 0, 0, 0.5);
 }
 
 li:hover {
@@ -61,9 +60,7 @@ a:visited {
 }
 
 .img-logo {
-  max-width: 768px;  
-  box-shadow: 0vw 1vh 5vh 1px rgba(0, 0, 0, 0.5);
-
+  max-width: 768px;
 }
 
 .button-container {
