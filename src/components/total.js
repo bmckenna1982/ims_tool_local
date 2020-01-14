@@ -1,9 +1,26 @@
 import React from 'react';
 import AppContext from './AppContext'
+import { CSVLink } from 'react-csv'
 import {numberWithCommas} from './utils/number-utils'
 
 class Total extends React.Component {
+  state = {
+    csvData: []
+  }
+
   static contextType = AppContext
+
+  componentDidMount() {
+    const csvData = [
+      { firstname: "Ahmed", lastname: "Tomi", email: "ah@smthing.co.com" },
+      { firstname: "Raed", lastname: "Labes", email: "rl@smthing.co.com" },
+      { firstname: "Yezzi", lastname: "Min l3b", email: "ymin@cocococo.com" }
+    ];
+
+    this.setState({
+      csvData: csvData
+    })
+  }
 
   render() {
     let total = this.context.models.reduce(
@@ -17,6 +34,7 @@ class Total extends React.Component {
           <button className='bttn' onClick={e => this.context.printCart(e)}>
             Print
           </button>
+          <CSVLink data={this.state.csvData}>Test</CSVLink>
           <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
           </button>
