@@ -34,10 +34,10 @@ class App extends React.Component {
 
   changeQty = (value, model) => {
     const val = value
-      ? Number(value, 10) > 0
-        ? Number(value, 10)
+        ? Number(value, 10) > 0
+            ? Number(value, 10)
+            : ''
         : ''
-      : ''
     let modelArray = [...this.state.models]
     console.log(model)
     const objIndex = modelArray.findIndex((item => item.model === model.model))
@@ -60,19 +60,15 @@ class App extends React.Component {
     })
   }
 
-  numberWithCommas = (x) => (
-    x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-  )
-
   scrollToCart = (e) => {
     e.preventDefault()
     console.log('scroll')
     const element = document.getElementsByClassName('Cart')
     element[0].scrollIntoView()
   }
-  
+
   togglePopup = () => {
-    this.setState({showPopup: !this.state.showPopup})
+    this.setState({ showPopup: !this.state.showPopup })
   }
 
   render() {
@@ -85,50 +81,48 @@ class App extends React.Component {
       emptyCart: this.emptyCart
     }
     return (
-      <AppContext.Provider
-        value={contextValue}>
-        <div className="App">
-          <header className="App-header">
-            <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.jpg" alt="logo"></img>
-            <nav className='NavMenu'>
-              <ul className='NavMenu_List'>
-                <li>
-                  <NavLink className='NavMenu_Link' to={'/'}>Home</NavLink>
-                </li>
-                <li onClick={this.scrollToCart}>Product Cart</li>
-                <li onClick={this.emptyCart}>Clear Product Cart</li>
-                <li onClick={this.togglePopup.bind(this)} className="print-button">Print
-                  {this.state.showPopup ?
-                      <Popup
-                          text={printString}
-                          closePopup={this.togglePopup.bind(this)}
-                      />
-                      : null
-                  }
-                </li>
-              </ul>
-            </nav>
-            <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
-            <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} />
-          </header>
-          <main>
-            <div className="layout">
-              {/* <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
-              <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} /> */}
-              <div className='list-container'>
-                <Switch>
-                  <Route exact path='/' component={LandingPage} />
-                  <Route exact path='/api/mfg/:manufacturer' component={Family} />
-                  <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList} />
-                </Switch>
-                <Cart />
+        <AppContext.Provider
+            value={contextValue}>
+          <div className="App">
+            <header className="App-header">
+              <img className="img-logo" src="https://imstool.s3.us-east-2.amazonaws.com/logo.jpg" alt="logo"></img>
+              <nav className='NavMenu'>
+                <ul className='NavMenu_List'>
+                  <li>
+                    <NavLink className='NavMenu_Link' to={'/'}>Home</NavLink>
+                  </li>
+                  <li onClick={this.scrollToCart}>Product Cart</li>
+                  <li onClick={this.emptyCart}>Clear Product Cart</li>
+                  <li onClick={this.togglePopup.bind(this)} className="print-button">Print
+                    {this.state.showPopup ?
+                        <Popup
+                            text={printString}
+                            closePopup={this.togglePopup.bind(this)}
+                        />
+                        : null
+                    }
+                  </li>
+                </ul>
+              </nav>
+              <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs}/>
+              <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs}/>
+            </header>
+            <main>
+              <div className="layout">
+                <div className='list-container'>
+                  <Switch>
+                    <Route exact path='/' component={LandingPage}/>
+                    <Route exact path='/api/mfg/:manufacturer' component={Family}/>
+                    <Route exact path='/api/mfg/:manufacturer/:family' component={PriceList}/>
+                  </Switch>
+                  <Cart/>
+                </div>
               </div>
-            </div>
-          </main>
-        </div>
-      </AppContext.Provider>
-    );
+            </main>
+          </div>
+        </AppContext.Provider>
+  );
   }
-}
+  }
 
-export default withRouter(App)
+  export default withRouter(App)

@@ -1,13 +1,10 @@
 import React from 'react';
 import AppContext from './AppContext'
+import { numberWithCommas } from './utils/number-utils'
 import './styles/total.scss';
 
 class Total extends React.Component {
   static contextType = AppContext
-
-  numberWithCommas = (x) => (
-      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-  )
 
   render() {
     let total = this.context.models.reduce(
@@ -16,7 +13,7 @@ class Total extends React.Component {
     return (
         <div className="summary__total">
           <div className="summary__total__label">
-            Grand total for all machines ${this.numberWithCommas(total.toFixed(2))}
+            Grand total for all machines ${numberWithCommas(total.toFixed(2))}
           </div>
           <button className='emptyCart_button' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
@@ -25,6 +22,5 @@ class Total extends React.Component {
     )
   }
 }
-
 
 export default Total;

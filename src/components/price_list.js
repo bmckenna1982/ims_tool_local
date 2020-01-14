@@ -1,5 +1,6 @@
 import React from 'react'
 import AppContext from './AppContext'
+import { numberWithCommas } from './utils/number-utils'
 import './styles/price_list.scss'
 
 export default class PriceList extends React.Component {
@@ -38,10 +39,6 @@ export default class PriceList extends React.Component {
     return prices
   }
 
-  numberWithCommas = (x) => (
-      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-  )
-
   render() {
     return (
         <div className="price_list">
@@ -60,7 +57,7 @@ export default class PriceList extends React.Component {
             {this.filterModels().map(item => (
                 <tr key={item.model}>
                   <td>{item.model}</td>
-                  <td>${this.numberWithCommas(item.price)}</td>
+                  <td>${numberWithCommas(item.price)}</td>
                   <td>
                     <input
                         type="text"

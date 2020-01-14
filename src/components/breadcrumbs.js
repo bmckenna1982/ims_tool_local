@@ -1,8 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AppContext from './AppContext'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faShoppingCart} from '@fortawesome/free-solid-svg-icons'
 import './styles/breadcrumbs.scss'
 
 export default class Breadcrumbs extends React.Component {
