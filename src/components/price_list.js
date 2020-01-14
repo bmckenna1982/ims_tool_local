@@ -1,7 +1,6 @@
 import React from 'react'
 import AppContext from './AppContext'
 import { numberWithCommas } from './utils/number-utils'
-import './styles/price_list.scss'
 
 export default class PriceList extends React.Component {
   state = {

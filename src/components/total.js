@@ -1,7 +1,6 @@
 import React from 'react';
 import AppContext from './AppContext'
 import { numberWithCommas } from './utils/number-utils'
-import './styles/total.scss';
 
 class Total extends React.Component {
   static contextType = AppContext

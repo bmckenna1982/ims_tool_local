@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/cart.scss'
 import CartList from './cartList'
 import Total from './total'
 import AppContext from '../components/AppContext'

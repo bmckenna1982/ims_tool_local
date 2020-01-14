@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AppContext from './AppContext'
-import './styles/breadcrumbs.scss'
 
 export default class Breadcrumbs extends React.Component {
 

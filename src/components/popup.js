@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles/popup.scss';
 
 class Popup extends React.Component {
   render() {

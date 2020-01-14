@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AppContext from './AppContext'
-import './styles/family.scss'
 
 export default class Family extends React.Component {
   state = {

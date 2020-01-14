@@ -4,7 +4,6 @@ import Family from './components/family'
 import LandingPage from './components/landingpage'
 import ModelStore from './newModelsData'
 import AppContext from './components/AppContext'
-import './App.scss';
 import PriceList from './components/price_list';
 import Cart from './components/cart'
 import Breadcrumbs from './components/breadcrumbs'
