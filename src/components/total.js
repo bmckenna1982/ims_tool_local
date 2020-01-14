@@ -1,9 +1,14 @@
 import React from 'react';
 import AppContext from './AppContext'
-import { numberWithCommas } from './utils/number-utils'
+import {numberWithCommas} from './utils/number-utils'
 
 class Total extends React.Component {
   static contextType = AppContext
+
+  printCart = (e) => {
+    e.preventDefault()
+    console.log('hi')
+  }
 
   render() {
     let total = this.context.models.reduce(
@@ -14,7 +19,10 @@ class Total extends React.Component {
           <div className="summary__total__label">
             Grand total for all machines ${numberWithCommas(total.toFixed(2))}
           </div>
-          <button className='emptyCart_button' onClick={e => this.context.emptyCart(e)}>
+          <button className='bttn' onClick={e => this.printCart(e)}>
+            Print
+          </button>
+          <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
           </button>
         </div>
