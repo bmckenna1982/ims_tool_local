@@ -31,10 +31,13 @@ class Total extends React.Component {
           <div className="summary__total__label">
             Grand total for all machines ${numberWithCommas(total.toFixed(2))}
           </div>
-          <button className='bttn' onClick={e => this.context.printCart(e)}>
+          {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
             Print
-          </button>
-          <CSVLink data={this.state.csvData}>Test</CSVLink>
+          </button> */}
+          <CSVLink data={this.context.models.filter(model => model.qty > 0)} 
+            className='bttn' filename={`ims-tool-output.csv`}>
+              Save CSV
+          </CSVLink>
           <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
           </button>
