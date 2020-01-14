@@ -40,7 +40,6 @@ class App extends React.Component {
     let modelArray = [...this.state.models]
     console.log(model)
     const objIndex = modelArray.findIndex((item => item.model === model.model))
-    console.log(objIndex)
     modelArray[objIndex].qty = val
 
     this.setState({
@@ -57,6 +56,12 @@ class App extends React.Component {
     this.setState({
       models: modelArray
     })
+  }
+
+  printCart = (e) => {
+    e.preventDefault()
+    // need to get this to print an array of everything in the cart, right now it is behaving weird
+    console.log(this.state.shopCart)
   }
 
   scrollToCart = (e) => {
@@ -77,7 +82,8 @@ class App extends React.Component {
       models: this.state.models,
       shopCart: this.state.shopCart,
       handleChange: this.changeQty,
-      emptyCart: this.emptyCart
+      emptyCart: this.emptyCart,
+      printCart: this.printCart,
     }
     return (
         <AppContext.Provider
