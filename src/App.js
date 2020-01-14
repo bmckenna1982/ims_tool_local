@@ -108,11 +108,13 @@ class App extends React.Component {
                 </li>
               </ul>
             </nav>
+            <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
+            <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} />
           </header>
           <main>
             <div className="layout">
-              <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
-              <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} />
+              {/* <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs} />
+              <Route exact path='/api/mfg/:manufacturer/:family' component={Breadcrumbs} /> */}
               <div className='list-container'>
                 <Switch>
                   <Route exact path='/' component={LandingPage} />

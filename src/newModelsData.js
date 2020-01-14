@@ -2505,7 +2505,7 @@ export default {
       "family": "PowerEdge",
       "model": "PE-R230",
       "price": "$123.60"
-    },
+    },    
     {
       "key": "0138D3C",
       "manufacturer": "DELL",
@@ -2519,7 +2519,7 @@ export default {
       "family": "PowerEdge",
       "model": "PE-R430",
       "price": "$164.52"
-    },
+    },    
     {
       "key": "0138D55",
       "manufacturer": "DELL",
@@ -10424,557 +10424,88 @@ export default {
       "price": "$1,180.62"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
+      "key": "0138D2N",
+      "manufacturer": "DELL",
+      "family": "PowerEdge",
+      "model": "PE-R220",
+      "price": "$174.99"
+    },    
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "0138D4K",
+      "manufacturer": "DELL",
+      "family": "PowerEdge",
+      "model": "PE-R420xr",
+      "price": "$197.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "7068M10",
+      "manufacturer": "HP",
+      "family": "Blades-Chassis",
+      "model": "BL460c G10",
+      "price": "$258.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "7068M09",
+      "manufacturer": "HP",
+      "family": "Servers other",
+      "model": "MicroServer G10",
+      "price": "$90.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "7477W26",
+      "manufacturer": "HP",
+      "family": "Servers other",
+      "model": "MicroServer G10",
+      "price": "$7.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "1540P7D",
+      "manufacturer": "SUN",
+      "family": "StorEdge",
+      "model": "S1TS",
+      "price": "$748.79"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "1540P8B",
+      "manufacturer": "SUN",
+      "family": "StorEdge",
+      "model": "L100BASE",
+      "price": "$7,295.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "1540P4U",
+      "manufacturer": "SUN",
+      "family": "Ultra",
+      "model": "U10",
+      "price": "$403.19"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "4521I33",
+      "manufacturer": "BROCADE",
+      "family": "Rebranded by IBM",
+      "model": "2498-E32",
+      "price": "$8,299.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "4521I26",
+      "manufacturer": "BROCADE",
+      "family": "Rebranded by IBM",
+      "model": "2499-192",
+      "price": "$7,384.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "4521I25",
+      "manufacturer": "BROCADE",
+      "family": "Rebranded by IBM",
+      "model": "2498-B80",
+      "price": "$2,949.99"
     },
     {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
+      "key": "4521I22",
+      "manufacturer": "BROCADE",
+      "family": "Rebranded by IBM",
+      "model": "2499-384",
+      "price": "$11,419.99"
     },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    },
-    {
-      "key": "",
-      "manufacturer": "",
-      "family": "",
-      "model": "",
-      "price": ""
-    }
   ]
 }
