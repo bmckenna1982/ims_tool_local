@@ -126,8 +126,8 @@ class App extends React.Component {
             </main>
           </div>
         </AppContext.Provider>
-  );
+    );
   }
-  }
+}
 
-  export default withRouter(App)
+export default withRouter(App)

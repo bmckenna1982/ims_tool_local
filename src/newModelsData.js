@@ -2505,7 +2505,7 @@ export default {
       "family": "PowerEdge",
       "model": "PE-R230",
       "price": "$123.60"
-    },    
+    },
     {
       "key": "0138D3C",
       "manufacturer": "DELL",
@@ -2519,7 +2519,7 @@ export default {
       "family": "PowerEdge",
       "model": "PE-R430",
       "price": "$164.52"
-    },    
+    },
     {
       "key": "0138D55",
       "manufacturer": "DELL",
@@ -10429,7 +10429,7 @@ export default {
       "family": "PowerEdge",
       "model": "PE-R220",
       "price": "$174.99"
-    },    
+    },
     {
       "key": "0138D4K",
       "manufacturer": "DELL",

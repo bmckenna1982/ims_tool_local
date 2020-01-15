@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AppContext from './AppContext'
 
 export default class Breadcrumbs extends React.Component {
@@ -22,10 +22,10 @@ export default class Breadcrumbs extends React.Component {
   }
 
   render() {
-    const crumbArray = [<Link key={'AllManufacturersPath'} to={{pathname: "/"}}>Manufacturers</Link>]
+    const crumbArray = [<Link key={'AllManufacturersPath'} to={{ pathname: "/" }}>Manufacturers</Link>]
     if (this.props.match.params.family) {
       crumbArray.push(<Link key={'manufacturerPath'}
-                            to={{pathname: `/api/mfg/${this.props.match.params.manufacturer}`}}>{this.props.match.params.manufacturer}</Link>)
+                            to={{ pathname: `/api/mfg/${this.props.match.params.manufacturer}` }}>{this.props.match.params.manufacturer}</Link>)
       crumbArray.push(this.props.match.params.family)
     } else {
       crumbArray.push(this.props.match.params.manufacturer)

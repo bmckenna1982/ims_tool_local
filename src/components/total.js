@@ -1,7 +1,7 @@
 import React from 'react';
 import AppContext from './AppContext'
 import { CSVLink } from 'react-csv'
-import {numberWithCommas} from './utils/number-utils'
+import { numberWithCommas } from './utils/number-utils'
 
 class Total extends React.Component {
   state = {
@@ -34,9 +34,9 @@ class Total extends React.Component {
           {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
             Print
           </button> */}
-          <CSVLink data={this.context.models.filter(model => model.qty > 0)} 
-            className='bttn' filename={`ims-tool-output.csv`}>
-              Save CSV
+          <CSVLink data={this.context.models.filter(model => model.qty > 0)}
+                   className='bttn' filename={`ims-tool-output.csv`}>
+            Save CSV
           </CSVLink>
           <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
