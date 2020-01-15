@@ -28,7 +28,7 @@ td {
   min-width: 50px;
 }
 
-// .price_list__table tr:nth-child(even){background-color: #f2f2f2;}
+.price_list__table td:nth-child(3){min-width: 85px;}
 
 tr:hover {background-color: #f2f2f2;}
 

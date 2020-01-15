@@ -15,7 +15,17 @@
 .Breadcrumb_container {
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 0 10px 5px 10px;
+  color: #bfbfbf;
+}
+
+.Breadcrumbs a {
+  color: #bfbfbf;
+}
+
+.Breadcrumbs a:hover {
+  cursor: pointer;
+  color: #fff;
 }
 
 @media only screen and (min-width: 800px) {
