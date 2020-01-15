@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^7.2.1",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
+    "react-csv": "^1.1.2",
     "react-dom": "^16.12.0",
     "react-id-generator": "^3.0.0",
     "react-router-dom": "^5.1.2",

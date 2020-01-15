@@ -1,15 +1,22 @@
-.emptyCart_button {
+.bttn {
   background: linear-gradient(#ffffff, var(--grey));
   border: 1px solid #333333;
   border-radius: 20px;
   box-shadow: 0 2px #333333;
+  text-decoration: none;
+  font-size: 13.3px;
+  font-family: Arial;
+  text-align: center;
+  color: #333;
+  padding: 5px 8px;
+  margin: 0 5px;
 }
 
-.emptyCart_button:hover {
+.bttn:hover {
   box-shadow: 0 1px #333333;
 }
 
-.emptyCart_button:active {
+.bttn:active {
   box-shadow: 0 0 #333333;
   top: 6px;
 }

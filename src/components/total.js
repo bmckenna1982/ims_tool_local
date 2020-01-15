@@ -1,13 +1,26 @@
 import React from 'react';
 import AppContext from './AppContext'
-import './styles/total.scss';
+import { CSVLink } from 'react-csv'
+import { numberWithCommas } from './utils/number-utils'
 
 class Total extends React.Component {
+  state = {
+    csvData: []
+  }
+
   static contextType = AppContext
 
-  numberWithCommas = (x) => (
-      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-  )
+  componentDidMount() {
+    const csvData = [
+      { firstname: "Ahmed", lastname: "Tomi", email: "ah@smthing.co.com" },
+      { firstname: "Raed", lastname: "Labes", email: "rl@smthing.co.com" },
+      { firstname: "Yezzi", lastname: "Min l3b", email: "ymin@cocococo.com" }
+    ];
+
+    this.setState({
+      csvData: csvData
+    })
+  }
 
   render() {
     let total = this.context.models.reduce(
@@ -16,15 +29,21 @@ class Total extends React.Component {
     return (
         <div className="summary__total">
           <div className="summary__total__label">
-            Grand total for all machines ${this.numberWithCommas(total.toFixed(2))}
+            Grand total for all machines ${numberWithCommas(total.toFixed(2))}
           </div>
-          <button className='emptyCart_button' onClick={e => this.context.emptyCart(e)}>
+          {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
+            Print
+          </button> */}
+          <CSVLink data={this.context.models.filter(model => model.qty > 0)}
+                   className='bttn' filename={`ims-tool-output.csv`}>
+            Save CSV
+          </CSVLink>
+          <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
           </button>
         </div>
     )
   }
 }
-
 
 export default Total;

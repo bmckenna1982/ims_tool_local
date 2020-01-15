@@ -15,6 +15,8 @@ const AppContext = React.createContext({
   handleChange: () => {
   },
   emptyCart: () => {
+  },
+  printCart: () => {
   }
 })
 

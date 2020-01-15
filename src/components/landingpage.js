@@ -1,7 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AppContext from '../components/AppContext'
-import './styles/landingpage.scss'
 
 export default class LandingPage extends React.Component {
   state = {

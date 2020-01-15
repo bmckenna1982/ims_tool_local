@@ -1,9 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AppContext from './AppContext'
-// import { API_BASE_URL } from '../config';
-
-import './styles/family.scss'
 
 export default class Family extends React.Component {
   state = {
@@ -23,16 +20,6 @@ export default class Family extends React.Component {
       families: families
     })
   }
-
-  // getData = async () => {
-  //   const manufacturer = this.props.location.pathname.slice(9)
-  //   const response = await fetch(`${API_BASE_URL}/mfg/${manufacturer}`)
-  //   const json = await response.json()
-  //   this.setState({
-  //     manufacturer: manufacturer,
-  //     families: json
-  //   })
-  // }
 
   render() {
     const path = this.props.location.pathname
