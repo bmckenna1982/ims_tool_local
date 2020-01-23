@@ -34,10 +34,10 @@ class Total extends React.Component {
           {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
             Print
           </button> */}
-          <CSVLink data={this.context.models.filter(model => model.qty > 0)}
+          {/* <CSVLink data={this.context.models.filter(model => model.qty > 0)}
                    className='bttn' filename={`ims-tool-output.csv`}>
             Save CSV
-          </CSVLink>
+          </CSVLink> */}
           <button className='bttn' onClick={e => this.context.emptyCart(e)}>
             Empty Cart
           </button>

@@ -48,7 +48,7 @@ export default class PriceList extends React.Component {
             <thead>
             <tr>
               <th>Model</th>
-              <th>Price</th>
+              <th>Price 1yr PP</th>
               <th>Qty</th>
             </tr>
             </thead>

@@ -23,9 +23,7 @@ class Cart extends React.Component {
           <CartList shopCart={this.props.shopCart}/>
           <hr/>
           <Total shopCart={this.props.shopCart}/>
-          <p className="Cart_disclaimer">These prices were good when published. They can be used in discussions with the
-            customer. However, ensure the customer knows that a final price must be obtained from IBM. Final prices
-            could be lower or higher.</p>
+          <p className="Cart_disclaimer">Prices are to be used for budget and planning discussions with the client and were good when published. A final IMS ISAT quote must be obtain from TechData R20. Final prices could be lower or higher.</p>
         </div>
         : <div className='Cart_contents'>
           <p>Your cart is empty</p>
