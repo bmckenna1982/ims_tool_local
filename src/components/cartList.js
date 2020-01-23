@@ -13,7 +13,7 @@ class CartList extends React.Component {
             <thead>
             <tr>
               <th>Machine</th>
-              <th>Unit cost</th>
+              <th>Price 1yr PP</th>
               <th>Qty</th>
               <th>Total Cost</th>
             </tr>

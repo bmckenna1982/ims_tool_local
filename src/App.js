@@ -1,5 +1,7 @@
 import React from 'react'
 import { Route, withRouter, Switch, NavLink } from 'react-router-dom'
+import { CSVLink } from 'react-csv'
+
 import Family from './components/family'
 import LandingPage from './components/landingpage'
 import ModelStore from './newModelsData'
@@ -7,7 +9,6 @@ import AppContext from './components/AppContext'
 import PriceList from './components/price_list';
 import Cart from './components/cart'
 import Breadcrumbs from './components/breadcrumbs'
-import Popup from './components/popup'
 
 class App extends React.Component {
   state = {
@@ -76,8 +77,6 @@ class App extends React.Component {
   }
 
   render() {
-    let printString = `View your cart then use the print features of your browser to capture your results. 
-  If a printer isn't handy, just capture a screen shot.`
     const contextValue = {
       models: this.state.models,
       shopCart: this.state.shopCart,
@@ -98,7 +97,13 @@ class App extends React.Component {
                   </li>
                   <li onClick={this.scrollToCart}>Product Cart</li>
                   <li onClick={this.emptyCart}>Clear Product Cart</li>
-                  <li onClick={this.togglePopup.bind(this)} className="print-button">Print
+                  {/* <li>
+                    <CSVLink data={this.state.models.filter(model => model.qty > 0)}
+                      className='print-button' filename={`ims-tool-output.csv`}>
+                      Save CSV
+                    </CSVLink>
+                  </li> */}
+                  {/* <li onClick={this.togglePopup.bind(this)} className="print-button">Print
                     {this.state.showPopup ?
                         <Popup
                             text={printString}
@@ -106,7 +111,7 @@ class App extends React.Component {
                         />
                         : null
                     }
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
               <Route exact path='/api/mfg/:manufacturer' component={Breadcrumbs}/>
