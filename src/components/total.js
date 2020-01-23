@@ -1,6 +1,6 @@
 import React from 'react';
 import AppContext from './AppContext'
-import { CSVLink } from 'react-csv'
+// import { CSVLink } from 'react-csv'
 import { numberWithCommas } from './utils/number-utils'
 
 class Total extends React.Component {
