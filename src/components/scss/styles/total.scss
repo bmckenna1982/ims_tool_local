@@ -12,6 +12,10 @@
   margin: 0 5px;
 }
 
+.no-shadow {
+  box-shadow: none;
+}
+
 .bttn:hover {
   box-shadow: 0 1px #333333;
 }

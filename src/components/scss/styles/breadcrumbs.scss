@@ -13,9 +13,8 @@
 }
 
 .Breadcrumb_container {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 10px 5px 10px;
+  max-width: 765px;
+  margin: 0 auto;
   color: #bfbfbf;
 }
 

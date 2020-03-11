@@ -2,6 +2,7 @@ import React from 'react';
 import AppContext from './AppContext'
 // import { CSVLink } from 'react-csv'
 import { numberWithCommas } from './utils/number-utils'
+import PrintButton from './print_pdf'
 
 class Total extends React.Component {
   state = {
@@ -24,24 +25,25 @@ class Total extends React.Component {
 
   render() {
     let total = this.context.models.reduce(
-        (sum, model) => (
-            sum + (model.qty * (Number(model.price.replace(/[^0-9.-]+/g, ""))))), 0)
+      (sum, model) => (
+        sum + (model.qty * (Number(model.price.replace(/[^0-9.-]+/g, ""))))), 0)
     return (
-        <div className="summary__total">
-          <div className="summary__total__label">
-            Grand total for all machines ${numberWithCommas(total.toFixed(2))}
-          </div>
-          {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
+      <div className="summary__total">
+        <div className="summary__total__label">
+          Grand total for all machines ${numberWithCommas(total.toFixed(2))}
+        </div>
+        {/* <button className='bttn' onClick={e => this.context.printCart(e)}>
             Print
           </button> */}
-          {/* <CSVLink data={this.context.models.filter(model => model.qty > 0)}
+        {/* <CSVLink data={this.context.models.filter(model => model.qty > 0)}
                    className='bttn' filename={`ims-tool-output.csv`}>
             Save CSV
           </CSVLink> */}
-          <button className='bttn' onClick={e => this.context.emptyCart(e)}>
-            Empty Cart
+        <PrintButton id={"cartPrices"} label={"Print cart"} />
+        <button className='bttn' id='emptyCartButton' crossorigin="anonymous" onClick={e => this.context.emptyCart(e)}>
+          Empty Cart
           </button>
-        </div>
+      </div>
     )
   }
 }
