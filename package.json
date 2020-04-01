@@ -1,6 +1,6 @@
 {
   "name": "ims_tool",
-  "homepage": "https://keith42.com/tdtools/ims-tool",
+  "homepage": "/tdtools/ims-tool",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

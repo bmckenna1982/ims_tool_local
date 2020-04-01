@@ -40,7 +40,7 @@ class Total extends React.Component {
             Save CSV
           </CSVLink> */}
         <PrintButton id={"cartPrices"} label={"Print cart"} />
-        <button className='bttn' id='emptyCartButton' crossorigin="anonymous" onClick={e => this.context.emptyCart(e)}>
+        <button className='bttn' id='emptyCartButton' onClick={e => this.context.emptyCart(e)}>
           Empty Cart
           </button>
       </div>

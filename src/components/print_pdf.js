@@ -15,8 +15,8 @@ const range = (start, end) => {
 };
 
 const togglePdfButtonView = () => {
-  document.getElementById('printButton').classList.toggle('no-shadow')
-  document.getElementById('emptyCartButton').classList.toggle('no-shadow')
+  document.getElementById('printButton').classList.toggle('print')
+  document.getElementById('emptyCartButton').classList.toggle('print')
 }
 
 const PrintButton = ({ id, label }) => {
@@ -33,12 +33,15 @@ const PrintButton = ({ id, label }) => {
 
       <div
         className="bttn" id="printButton"
-        onClick={() => {
+        crossOrigin="anonymous"
+        onClick={async () => {
           togglePdfButtonView()
           console.log('id', id)
           console.log('document.getElementById(id)', document.getElementById(id))
           const input = document.getElementById(id);
+          input.setAttribute('crossOrigin', 'anonymous')
           const disclaimer = document.getElementById('cartDisclaimer')
+          disclaimer.setAttribute('crossOrigin', 'anonymous')
           const disclaimerHeightMm = pxToMm(disclaimer.offsetHeight);
           const disclaimerWidthMm = pxToMm(disclaimer.offsetWidth);
           const inputHeightMm = pxToMm(input.offsetHeight);
@@ -56,32 +59,32 @@ const PrintButton = ({ id, label }) => {
           window.scrollTo(0, 0);
           let pdf = new jsPDF('p', 'mm');
 
-          html2canvas(disclaimer, {
-            useCORS: true, logging: true, scale: 1,
-            "onrendered": function (canvas) {
-              alert(canvas);
-              var url = canvas.toDataURL("image/png");
-              window.open(url, "_blank");
-            }
+          await html2canvas(disclaimer, {
+            useCORS: true, logging: true, width: 375,
+            // "onrendered": function (canvas) {
+            //   alert(canvas);
+            //   var url = canvas.toDataURL("image/png");
+            //   window.open(url, "_blank");
+            // }
           })
             .then((canvas) => {
               console.log('discalimer', disclaimer)
               const disclaimerData = canvas.toDataURL('image/png');
 
               // pdf.addImage(disclaimerData, 'PNG', 110, 10, disclaimerWidthMm - 5, disclaimerHeightMm);
-              pdf.addImage(disclaimerData, 'PNG', 105, 10, disclaimerWidthMm + 5, disclaimerHeightMm);
-              pdf.save(`${id}.pdf`);
-              togglePdfButtonView()
+              pdf.addImage(disclaimerData, 'PNG', 110, 10, disclaimerWidthMm - 5, disclaimerHeightMm);
+              // pdf.save(`${id}.pdf`);
+              // togglePdfButtonView()
             });
           ;
 
-          html2canvas(input, {
+          await html2canvas(input, {
             useCORS: true, logging: true, width: 400,
-            "onrendered": function (canvas) {
-              alert(canvas);
-              var url = canvas.toDataURL("image/png");
-              window.open(url, "_blank");
-            }
+            // "onrendered": function (canvas) {
+            //   alert(canvas);
+            //   var url = canvas.toDataURL("image/png");
+            //   window.open(url, "_blank");
+            // }
           })
             // html2canvas(input)
             .then((canvas) => {
@@ -112,7 +115,7 @@ const PrintButton = ({ id, label }) => {
               // }
               console.log('position', position)
               // pdf.addImage(imgData, 'PNG', 10, position + 10, inputWidthMm, inputHeightMm);
-              pdf.addImage(imgData, 'PNG', 5, position + 10, inputWidthMm, inputHeightMm);
+              pdf.addImage(imgData, 'PNG', 15, position + 10, inputWidthMm, inputHeightMm);
               heightLeft -= pageHeight;
 
               console.log('heightLeft', heightLeft)
@@ -125,8 +128,8 @@ const PrintButton = ({ id, label }) => {
               }
               // pdf.addImage(imgData, 'PNG', 0, 0, 200, inputHeightMm);
               // pdf.addImage(imgData, 'PNG', 20, 20, inputWidthMm, inputHeightMm)
-
-              // pdf.save(`${id}.pdf`);
+              togglePdfButtonView()
+              pdf.save(`${id}.pdf`);
             });
           ;
 
@@ -134,7 +137,7 @@ const PrintButton = ({ id, label }) => {
       >
         {label}
       </div>
-    </React.Fragment>
+    </React.Fragment >
     // </div>
   )
 };
