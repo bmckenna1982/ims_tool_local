@@ -20,11 +20,18 @@ export default class PriceList extends React.Component {
 
   filterModels() {
     const { manufacturer, family } = this.props.match.params
+    const manufacturerList = this.context.models.filter(model => model.manufacturer === manufacturer)
+    // console.log('manufacturerList', manufacturerList)
+    // if (family === "all-models") {
+
+    // }
     const category = (family !== "all-models")
       ? 'family'
       : 'manufacturer'
     // const family = this.props.match.params.family    
-    const prices = this.context.models.reduce((filtered, item) => {
+
+
+    const prices = manufacturerList.reduce((filtered, item) => {
       if (item[category] === this.props.match.params[category]) {
         const newPrice = Number(item.price.replace(/[^0-9.-]+/g, "")).toFixed(2)
         let newObj = {
@@ -40,7 +47,7 @@ export default class PriceList extends React.Component {
       return filtered
     }, [])
     prices.sort((a, b) => (a.model > b.model) ? 1 : -1)
-    console.log('prices', prices)
+    // console.log('prices', prices)
     return prices
   }
 
@@ -62,7 +69,7 @@ export default class PriceList extends React.Component {
             {this.filterModels().map(item => (
               <tr key={item.model}>
                 <td>{item.model}</td>
-                <td>${numberWithCommas(item.price)}</td>
+                <td className='price_list__table___price'>${numberWithCommas(item.price)}</td>
                 <td>
                   <input
                     type="text"

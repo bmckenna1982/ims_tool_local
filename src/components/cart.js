@@ -27,7 +27,7 @@ class Cart extends React.Component {
           <p className="Cart_disclaimer">Prices are to be used for budget and planning discussions with the client and were good when published. A final IMS ISAT quote must be obtain from TechData R20. Final prices could be lower or higher.</p>
         </div>
         <div className='Cart_contents__disclaimer' id='cartDisclaimer'>
-          <img className='disclaimer_img' crossOrigin='anonymous' id='disclaimer' src='https://imstool-client.s3.us-east-2.amazonaws.com/disclaimer.png' />
+          <img className='disclaimer_img' crossOrigin='anonymous' id='disclaimer' alt='disclaimer' src='https://imstool-client.s3.us-east-2.amazonaws.com/disclaimer.png' />
         </div>
       </div>
       : <div className='Cart_contents'>
