@@ -12,13 +12,15 @@
   font-size: 18px;
 }
 
-.price_list__table, .cart_table {
+.price_list__table,
+.cart_table {
   border-collapse: collapse;
   background-color: #ddd;
   width: 100%;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #222;
   padding: 5px;
   font-size: 14px;
@@ -43,9 +45,13 @@ th, td {
 //   min-width: 50px;
 // }
 
-.price_list__table td:nth-child(3){min-width: 85px;}
+.price_list__table td:nth-child(3) {
+  min-width: 90px;
+}
 
-tr:hover {background-color: #f2f2f2;}
+tr:hover {
+  background-color: #f2f2f2;
+}
 
 th {
   padding-top: 6px;
@@ -55,7 +61,8 @@ th {
   color: white;
 }
 
-.Increment_plusOne, .Increment_minusOne {
+.Increment_plusOne,
+.Increment_minusOne {
   min-width: 25px;
 }
 
@@ -65,9 +72,9 @@ input {
 }
 
 @media only screen and (min-width: 769px) {
-  .price_list h1, .price_list h2 {
+  .price_list h1,
+  .price_list h2 {
     font-size: 21px;
     margin: 0.67em 0;
   }
-
 }
